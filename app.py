@@ -24,9 +24,7 @@ def blog_generate_using_bedrock(blog_topic: str)->str:
     
         response = bedrock.invoke_model(
                         body=json.dumps(body),
-                        modelId= "arn:aws:bedrock:us-east-2:677276104961:inference-profile/us.meta.llama3-1-8b-instruct-v1:0", 
-                        #"meta.llama3-1-8b-instruct-v1:0",
-                       # inferenceArn="arn:aws:bedrock:us-east-2:677276104961:inference-profile/us.meta.llama3-1-8b-instruct-v1:0"
+                        modelId= UPDATE_THIS_WITH_INFERENCE_PROFILE_ARN, # you can get this from AWS Bedrock 
                         )
 
         response_content = response.get('body').read()
