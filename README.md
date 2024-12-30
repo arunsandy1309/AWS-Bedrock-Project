@@ -108,6 +108,8 @@ To enable external invocation, I integrated the Lambda function with API Gateway
 
 2. **Invoke the API**:
    - I tested the endpoint using tools like Postman, cURL, and custom scripts to send POST requests to the API Gateway endpoint.
+   - ![image](https://github.com/user-attachments/assets/a7655611-6cb1-4bff-817a-732e2eba86a9)
+
 
 Example POST request:
 - **Endpoint**: `<API Gateway URL>`
