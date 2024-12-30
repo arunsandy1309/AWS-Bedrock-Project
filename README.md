@@ -57,7 +57,7 @@ body = {
 #### **Step 3: Invoke the Model**
 I used the `invoke_model` method to send the request to Amazon Bedrock. It requires:
 - **Model Identifier (`modelId`)**:
-  - Specifies the foundational model to invoke (e.g., `meta.llama3-1-8b-instruct-v1:0` or the ARN of the associated inference profile).
+  - Specifies the foundational model to invoke (e.g., the ARN of the associated inference profile).
 - **Input Payload**:
   - Contains the prompt and generation parameters.
 
@@ -65,9 +65,10 @@ Code snippet:
 ```python
 response = bedrock.invoke_model(
     body=json.dumps(body),
-    modelId="arn:aws:bedrock:us-east-2:677276104961:inference-profile/us.meta.llama3-1-8b-instruct-v1:0"
+    modelId= UPDATED_THIS_WITH_AWS_BEDROCK_MODEL
 )
 ```
+![image](https://github.com/user-attachments/assets/2fdbd343-3633-4cdc-8c63-f376e4416c95)
 
 #### **Step 4: Extract the Generated Output**
 The response from Bedrock contains the model's generated output in the `body` attribute. I processed this to extract the content as JSON.
